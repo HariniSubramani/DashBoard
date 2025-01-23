@@ -4,41 +4,88 @@ body {
   overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-.App{
+.App {
   display: flex;
   flex-direction: column;
   width: 100vw;
   height: 100vh;
 }
-.AppFooter{
+
+.AppFooter {
   height: 50px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   border-top: 1px solid black;
 }
-.SideMenuAndPageContent{
+
+.SideMenuAndPageContent {
   display: flex;
   flex: 1;
-  justify-content:flex-start;
+  justify-content: flex-start;
   align-items: flex-start;
-    
 }
-.AppHeader{
-height: 50px;
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 4px 40px 4px 12px;
-border-bottom: 1px solid black;
-}
-.PageContent{
-  padding:15px;
-}
-.SideMenu{
-   height: 100%;
 
+.AppHeader {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 40px 4px 12px;
+  border-bottom: 1px solid black;
 }
-.SideMenuvertical{
+
+.PageContent {
+  padding: 15px;
+}
+
+.SideMenu {
   height: 100%;
+}
+
+.SideMenuvertical {
+  height: 100%;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .AppHeader {
+    padding: 4px 20px; /* Reduce padding on smaller screens */
+  }
+
+  .AppFooter {
+    height: 40px; /* Adjust footer height */
+  }
+
+  .SideMenuAndPageContent {
+    flex-direction: column; /* Stack side menu and content vertically */
+  }
+
+  .SideMenu {
+    width: 100%; /* Full width on smaller screens */
+    height: auto; /* Allow height to adjust */
+  }
+
+  .PageContent {
+    padding: 10px; /* Reduce padding */
+  }
+}
+
+@media (max-width: 480px) {
+  .AppHeader {
+    flex-direction: column; /* Stack header items vertically */
+    align-items: flex-start; /* Align items to the start */
+  }
+
+  .AppFooter {
+    height: 35px; /* Further adjust footer height */
+  }
+
+  .SideMenu {
+    display: none; /* Hide side menu on very small screens */
+  }
+
+  .PageContent {
+    padding: 5px; /* Further reduce padding */
+  }
 }
