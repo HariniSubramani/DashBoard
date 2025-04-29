@@ -12,7 +12,7 @@ jobs:
       - name: Trigger Reflect Test Suite
         run: |
           curl -X POST \
-          https://api.reflect.run/v1/suites/FdBvEpouJM9lz7dxXJZBMa6GQDJKJKYk6X4k5ADi/executions 
+          https://api.reflect.run/v1/suites/dashboard-test/executions 
             -H "X-API-KEY: ${{ secrets.REFLECT_API_KEY }}" \
             -H "Content-Type: application/json" \
             -d '{
